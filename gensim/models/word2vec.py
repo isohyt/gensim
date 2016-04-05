@@ -1291,7 +1291,7 @@ class Word2Vec(utils.SaveLoad):
 
         """
 
-        return most_similar(positive=[word], topn=topn, restrict_vocab=restrict_vocab)
+        return self.most_similar(positive=[word], topn=topn, restrict_vocab=restrict_vocab)
 
     def similar_by_vector(self, vector, topn=10, restrict_vocab=None):
         """
@@ -1311,7 +1311,7 @@ class Word2Vec(utils.SaveLoad):
 
         """
 
-        return most_similar(positive=[vector], topn=topn, restrict_vocab=restrict_vocab)
+        return self.most_similar(positive=[vector], topn=topn, restrict_vocab=restrict_vocab)
 
     def doesnt_match(self, words):
         """
