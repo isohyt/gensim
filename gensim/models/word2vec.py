@@ -1290,7 +1290,6 @@ class Word2Vec(utils.SaveLoad):
           [('user', 0.9999163150787354), ...]
 
         """
-        self.init_sims()
 
         return most_similar(positive=[word], topn=topn, restrict_vocab=restrict_vocab)
 
@@ -1311,8 +1310,8 @@ class Word2Vec(utils.SaveLoad):
           [('survey', 0.9942699074745178), ...]
 
         """
-        return most_similar(positive=[vector], topn=topn, restrict_vocab=restrict_vocab)
 
+        return most_similar(positive=[vector], topn=topn, restrict_vocab=restrict_vocab)
 
     def doesnt_match(self, words):
         """
